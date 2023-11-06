@@ -37,7 +37,7 @@ driver.get(f'https://www.airbnb.com.sg/users/show/{id_list.iloc[0, 0]}')
 # dai90738@zslsz.com Password1234
 write_buf = []
 for i in range(id_list.shape[0]):
-    if i % 100 == 0:
+    if i % 50 == 0:
         with open('user_loc.csv', 'a', newline='', encoding="utf-8") as file:
             writer = csv.writer(file)
             writer.writerows(write_buf)
@@ -59,7 +59,7 @@ for i in range(id_list.shape[0]):
             write_buf.append([id_list.iloc[i, 0], ""])
             print(f"Scrapped: {i+1}/{id_list.shape[0]}")
         else:
-            write_buf.append([id_list.iloc[i, 0], str(e)])
+            write_buf.append([id_list.iloc[i, 0], ""])
             print(f"Error occured: {i+1}")
 
 with open('user_loc.csv', 'a', newline='', encoding="utf-8") as file:
