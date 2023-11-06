@@ -90,5 +90,5 @@ ROBOTSTXT_OBEY = False
 # Set settings whose default value is deprecated to a future-proof value
 # REQUEST_FINGERPRINTER_IMPLEMENTATION = '2.7'
 # TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
-LOG_LEVEL='DEBUG'
+LOG_LEVEL='INFO'
 USER_AGENT="Mozilla/5.0"
