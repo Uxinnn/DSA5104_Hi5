@@ -4,9 +4,11 @@ from selenium.webdriver.common.by import By
 import pandas as pd 
 import time
 from selenium.webdriver.chrome.service import Service
-import csv
+import urllib
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+search_query = "Dallas, Texas, USA"
 
 service = Service(executable_path=r'chromedriver.exe')
 options = webdriver.ChromeOptions() 
@@ -18,7 +20,7 @@ options.add_argument("--headless=new")
 driver = webdriver.Chrome(options=options, service=service)
 arr =[]
 for i in range(10):
-    driver.get(f'https://www.tripadvisor.com/Search?q=Dallas%2C%20Texas%2C%20USA&ssrc=A&geo=1&o={i*30}')
+    driver.get(f'https://www.tripadvisor.com/Search?q={urllib.parse.quote(search_query)}&ssrc=A&geo=1&o={i*30}')
     time.sleep(5)
     elts = driver.find_elements(By.XPATH, '//div[@class="location-meta-block"]')
     for t in elts:
