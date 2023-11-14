@@ -25,3 +25,8 @@ The scraped data will then be combined with the data from CMU's Hotel Reviews da
 * `scrapy crawl trip_advisor -O trip_advisor_scraped.json`
 * Scraper should start to run, data will be stored in the file `Scrapers/trip_advisor/scrapers/scrapers/trip_advisor_scraped.json`
 
+
+## Data Processing
+
+The scraped data are then combined with the raw data from the source datasets into formats that can be uploaded to MySQL and MongoDB. 
+Notebooks used for the processing of the data can be found under the `data_processing` directory.
