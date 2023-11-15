@@ -7,9 +7,9 @@ We have 2 main sources of data: AirBnB and Trip Advisor. The scrapers in this re
 ## Prerequisites
 
 * Python3
-* (Scrapy)[https://scrapy.org/]
-* (Selenium)[https://selenium-python.readthedocs.io/]
-* (Chromedriver)[https://googlechromelabs.github.io/chrome-for-testing/]
+* [Scrapy](https://scrapy.org/)
+* [Selenium](https://selenium-python.readthedocs.io/)
+* [Chromedriver](https://googlechromelabs.github.io/chrome-for-testing/)
 
 ## Trip Advisor
 
